@@ -1,37 +1,21 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { fetchUsers, addUser } from './../store';
 import Button from './Button';
 import Skeleton from './Skeleton';
+import { useThunk } from './../hooks/use-thunk';
 
 function UsersList() {
-  const [isLoadingUsers, setIsLoadingUsers] = useState(false); // show skeletons when true
-  const [loadingUsersError, setLoadingUsersError] = useState(null); // show err msg when not null.
-  const [isCreatingUser, setIsCreatingUser] = useState(false);
-  const [creatingUserError, setCreatingUserError] = useState(null);
+  const [doFetchUsers, isLoadingUsers, loadingUsersError] =
+    useThunk(fetchUsers);
 
-  const dispatch = useDispatch();
+  const [doCreateUser, isCreatingUser, creatingUserError] = useThunk(addUser);
+
   const { data } = useSelector(state => state.users);
 
   useEffect(() => {
-    setIsLoadingUsers(true);
-    dispatch(fetchUsers())
-      // dispatch returns a Promise with broken .then/.catch rules.
-      // .then is always called whether success or failure.
-      // argument to .then is fulfilled or rejected action object.
-      .unwrap() // hack to 'fix' the promise
-      .then(() => {
-        console.log('success');
-      })
-      .catch(error => {
-        console.log('failed');
-        setLoadingUsersError(error);
-      })
-      .finally(() => {
-        // called if request succeeds or fails.
-        setIsLoadingUsers(false);
-      });
-  }, [dispatch]);
+    doFetchUsers();
+  }, [doFetchUsers]);
 
   // height of 10px, width of 100%.
   if (isLoadingUsers) return <Skeleton howMany={5} className="h-10 w-full" />;
@@ -49,11 +33,7 @@ function UsersList() {
   });
 
   const handleUserAdd = () => {
-    setIsCreatingUser(true);
-    dispatch(addUser())
-      .unwrap() // hack to fix broken Promise returned from dispatch.
-      .catch(error => setCreatingUserError(error))
-      .finally(() => setIsCreatingUser(false));
+    doCreateUser();
   };
 
   return (
