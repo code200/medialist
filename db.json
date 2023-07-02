@@ -7,24 +7,59 @@
     {
       "name": "Rochelle Leannon",
       "id": 30
-    },
-    {
-      "name": "Maureen Morar",
-      "id": 32
-    },
-    {
-      "name": "Jessie Bednar",
-      "id": 33
-    },
-    {
-      "name": "Miss Angela Reinger",
-      "id": 34
-    },
-    {
-      "name": "Dr. Adrienne Thompson",
-      "id": 35
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "title": "Harry Hiking Trip",
+      "id": 1,
+      "userId": 3
+    },
+    {
+      "title": "Harry's Album 2",
+      "id": 2,
+      "userId": 3
+    },
+    {
+      "title": "Rochelle's Album",
+      "id": 3,
+      "userId": 30
+    },
+    {
+      "userId": 3,
+      "title": "New Album!",
+      "id": 6
+    },
+    {
+      "userId": 3,
+      "title": "Electronic Steel Pants",
+      "id": 7
+    },
+    {
+      "userId": 30,
+      "title": "Ergonomic Plastic Ball",
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "title": "Sleek Concrete Shirt",
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "title": "Tasty Metal Salad",
+      "id": 10
+    },
+    {
+      "userId": 3,
+      "title": "Refined Rubber Chips",
+      "id": 11
+    },
+    {
+      "userId": 3,
+      "title": "Electronic Granite Bacon",
+      "id": 12
+    }
+  ],
   "photos": []
 }
