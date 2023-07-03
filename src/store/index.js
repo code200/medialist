@@ -22,4 +22,8 @@ export * from './thunks/fetchUsers'; // export everything that's exported from f
 export * from './thunks/addUser';
 export * from './thunks/removeUser';
 
-export { useFetchAlbumsQuery, useAddAlbumMutation } from './apis/albumsApi'; // rtkq hooks
+export {
+  useFetchAlbumsQuery,
+  useAddAlbumMutation,
+  useRemoveAlbumMutation,
+} from './apis/albumsApi'; // rtkq hooks

@@ -5,60 +5,45 @@
       "id": 3
     },
     {
-      "name": "Rochelle Leannon",
-      "id": 30
+      "name": "Lana Raynor-Tremblay",
+      "id": 4
     }
   ],
   "albums": [
     {
-      "title": "Harry Hiking Trip",
-      "id": 1,
-      "userId": 3
-    },
-    {
-      "title": "Harry's Album 2",
-      "id": 2,
-      "userId": 3
-    },
-    {
-      "title": "Rochelle's Album",
-      "id": 3,
-      "userId": 30
-    },
-    {
-      "userId": 3,
-      "title": "New Album!",
-      "id": 6
-    },
-    {
-      "userId": 3,
-      "title": "Electronic Steel Pants",
-      "id": 7
-    },
-    {
-      "userId": 30,
-      "title": "Ergonomic Plastic Ball",
-      "id": 8
-    },
-    {
-      "userId": 3,
-      "title": "Sleek Concrete Shirt",
-      "id": 9
-    },
-    {
-      "userId": 3,
-      "title": "Tasty Metal Salad",
-      "id": 10
-    },
-    {
-      "userId": 3,
-      "title": "Refined Rubber Chips",
-      "id": 11
-    },
-    {
       "userId": 3,
       "title": "Electronic Granite Bacon",
       "id": 12
+    },
+    {
+      "userId": 3,
+      "title": "Bespoke Frozen Tuna",
+      "id": 14
+    },
+    {
+      "userId": 3,
+      "title": "Rustic Cotton Pizza",
+      "id": 15
+    },
+    {
+      "userId": 3,
+      "title": "Modern Soft Chips",
+      "id": 16
+    },
+    {
+      "userId": 3,
+      "title": "Oriental Metal Pizza",
+      "id": 24
+    },
+    {
+      "userId": 4,
+      "title": "Ergonomic Concrete Tuna",
+      "id": 25
+    },
+    {
+      "userId": 4,
+      "title": "Intelligent Steel Chicken",
+      "id": 26
     }
   ],
   "photos": []
