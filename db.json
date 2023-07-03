@@ -44,7 +44,43 @@
       "userId": 4,
       "title": "Intelligent Steel Chicken",
       "id": 26
+    },
+    {
+      "userId": 3,
+      "title": "Bespoke Fresh Bacon",
+      "id": 27
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "albumId": 15,
+      "url": "https://loremflickr.com/150/150/abstract?lock=5140127261130752",
+      "id": 2
+    },
+    {
+      "albumId": 15,
+      "url": "https://loremflickr.com/150/150/abstract?lock=8009784328454144",
+      "id": 3
+    },
+    {
+      "albumId": 25,
+      "url": "https://loremflickr.com/150/150/abstract?lock=2739370777903104",
+      "id": 4
+    },
+    {
+      "albumId": 12,
+      "url": "https://loremflickr.com/150/150/abstract?lock=7435360202129408",
+      "id": 5
+    },
+    {
+      "albumId": 12,
+      "url": "https://loremflickr.com/150/150/abstract?lock=1423969492140032",
+      "id": 6
+    },
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/150/150/abstract?lock=7000572125249536",
+      "id": 7
+    }
+  ]
 }

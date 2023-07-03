@@ -2,16 +2,23 @@ import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import { usersReducer } from './slices/usersSlice';
 import { albumsApi } from './apis/albumsApi';
+import { photosApi } from './apis/photosApi';
+// rtkq: slice is generated automatically when we create api.
+// that slice creates reducer(s).
+// a set of middleware is also created.
 
 const store = configureStore({
   reducer: {
     users: usersReducer,
     // albums: albumsApi.reducer, // albums key comes from albumsApi reducerPath.
     [albumsApi.reducerPath]: albumsApi.reducer, // this version avoids magic strings / misspellings.
+    [photosApi.reducerPath]: photosApi.reducer,
   },
   middleware: getDefaultMiddleware => {
     // just a required part of rtkq setup
-    return getDefaultMiddleware().concat(albumsApi.middleware);
+    return getDefaultMiddleware()
+      .concat(albumsApi.middleware)
+      .concat(photosApi.middleware);
   },
 });
 
@@ -27,3 +34,9 @@ export {
   useAddAlbumMutation,
   useRemoveAlbumMutation,
 } from './apis/albumsApi'; // rtkq hooks
+
+export {
+  useFetchPhotosQuery,
+  useAddPhotoMutation,
+  useRemovePhotoMutation,
+} from './apis/photosApi'; // rtkq hooks

@@ -1,14 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { faker } from '@faker-js/faker'; // use for fake item title.
-
-// DEV only to simulate slow connection without throttling bandwidth.
-const pause = duration => {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve();
-    }, duration);
-  });
-};
+import { devPause } from './../../helpers';
 
 const albumsApi = createApi({
   // lots of configs. ok to break it up into separate files.
@@ -19,7 +11,7 @@ const albumsApi = createApi({
     fetchFn: async (...args) => {
       // override the fetch function that rtkq uses.
       // ** REMOVE FOR PRODUCTION
-      await pause(1000);
+      await devPause(1000);
       return fetch(...args);
     },
   }),
@@ -58,7 +50,7 @@ const albumsApi = createApi({
           // return [{ type: 'Album', id: user.id }];
           // update to include many more tags that can match
           // Any tag that matches will invalidate the request.
-          // This is better than sending objects as props just to get their ID.
+          // This is better than sending objects as props in JSX just to get their ID.
           const tags = result.map(album => {
             return { type: 'Album', id: album.id };
           });
