@@ -10,7 +10,8 @@ import { photosApi } from './apis/photosApi';
 const store = configureStore({
   reducer: {
     users: usersReducer,
-    // albums: albumsApi.reducer, // albums key comes from albumsApi reducerPath.
+
+    // for RTK-Q. keys come from reducerPath property.
     [albumsApi.reducerPath]: albumsApi.reducer, // this version avoids magic strings / misspellings.
     [photosApi.reducerPath]: photosApi.reducer,
   },

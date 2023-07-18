@@ -10,7 +10,8 @@ export function useThunk(thunk) {
   // wrap in useCallback so it has a stable identity
   const runThunk = useCallback(
     arg => {
-      // pass an arg for delete user case.
+      // pass an arg for delete user case:
+      // (which is the user object so we know which user to delete)
       setIsLoading(true);
       dispatch(thunk(arg))
         .unwrap() // get a more typical promise

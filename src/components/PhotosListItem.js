@@ -2,7 +2,7 @@ import { GoTrash } from 'react-icons/go';
 import { useRemovePhotoMutation } from './../store';
 
 function PhotosListItem({ photo }) {
-  const [removePhoto, results] = useRemovePhotoMutation();
+  const [removePhoto /*, results*/] = useRemovePhotoMutation();
 
   const handleRemovePhoto = () => {
     removePhoto(photo);
